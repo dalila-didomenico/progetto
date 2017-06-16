@@ -1,12 +1,15 @@
 package it.uniroma3.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 @Entity
 @NamedQuery(name = "findAll", query = "SELECT a FROM Autore a")
@@ -20,9 +23,11 @@ public class Autore {
 	private String nazionalità;
     private Date dataNascita;
 	private Date dataMorte;
+	@OneToMany
+	private List<Quadro> quadri;
 
 	public Autore() {
-		// TODO Auto-generated constructor stub
+		this.quadri = new ArrayList<>();
 	}
 
 	public String getNome() {
