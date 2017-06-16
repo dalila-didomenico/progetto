@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="quadri")
+@NamedQuery(name = "findAll", query = "SELECT q FROM Quadro q")
 public class Quadro {
 
 	@Id
