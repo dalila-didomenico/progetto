@@ -64,7 +64,6 @@ public class QuadroController extends HttpServlet {
 		String nextPage = "/quadri.jsp";
 		
 		QuadroService service = new QuadroService();
-		
 		if(request.getParameter("id") != null) {
 			Long id = Long.parseLong(request.getParameter("id"));
 			Quadro quadro = service.getOne(id);
