@@ -33,7 +33,7 @@ public class QuadroController extends HttpServlet {
 		if(request.getParameter("commandC")!=null){
 		long id= Long.parseLong(request.getParameter("id"));
 		QuadroService pv = new QuadroService();
-		Quadro q = pv.getOneQuadro(id);//NO
+		Quadro q = pv.getOne(id);//NO
 		pv.delete(q);						   // param id
 		request.setAttribute("quadri",pv.getQuadri());
 		nextPage="/quadri.jsp";
@@ -64,10 +64,9 @@ public class QuadroController extends HttpServlet {
 		String nextPage = "/quadri.jsp";
 		
 		QuadroService service = new QuadroService();
-		
 		if(request.getParameter("id") != null) {
 			Long id = Long.parseLong(request.getParameter("id"));
-			Quadro quadro = service.getOneQuadro(id);
+			Quadro quadro = service.getOne(id);
 			request.setAttribute("quadro", quadro);
 			nextPage = "/quadro.jsp";
 		}
