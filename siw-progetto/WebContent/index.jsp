@@ -1,16 +1,18 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1" />
-<title>Nuovo Autore</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Benvenuto</title>
 </head>
 <body>
-	<form action="autore" method="post">
-		<h2>Benvenuto! Cosa vuoi fare?</h2>
-		<ul>
-		<li>Consulta la <a href="autore">lista degli autori</a></li>
-		<li>Inserisci un <a href="insAutore.jsp">nuovo autore</a></li>
-		</ul>
-	</form>
+	<p align="center"><h1>Benvenuto! Cosa desideri fare?</h1></p>
+	<ul>
+		<li><a href="login.jsp">Accedi come amministratore</a></li>
+		<li><a href="">Sfoglia le opere della galleria</a></li>
+		<li><a href="">Naviga tra gli artisti</a></li>
+	</ul>
+
 </body>
 </html>
