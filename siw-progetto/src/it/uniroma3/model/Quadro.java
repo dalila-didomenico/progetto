@@ -14,7 +14,7 @@ public class Quadro {
 	@Column(nullable=false)
 	private String titolo;
 
-	private int anno;
+	private int annoRealizzazione;
 	private String tecnica;
 	private String dimensioni;
 
@@ -33,10 +33,10 @@ public class Quadro {
 		this.titolo = titolo;
 	}
 	public int getAnno() {
-		return anno;
+		return annoRealizzazione;
 	}
 	public void setAnno(int anno) {
-		this.anno = anno;
+		this.annoRealizzazione = anno;
 	}
 	public String getTecnica() {
 		return tecnica;
