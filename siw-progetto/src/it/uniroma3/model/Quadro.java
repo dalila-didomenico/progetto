@@ -21,15 +21,9 @@ public class Quadro {
 	@JoinColumn(name="artista")
 	private Autore autore;
 
-	@ManyToOne
-	@JoinColumn(name="sala")
-	private Sala sala;
-
-
 	public Quadro() {
-		// TODO Auto-generated constructor stub
+		//
 	}
-
 
 	public String getTitolo() {
 		return titolo;
@@ -59,24 +53,11 @@ public class Quadro {
 		return id;
 	}
 
-
 	public Autore getAutore() {
 		return autore;
 	}
 
-
 	public void setAutore(Autore autore) {
 		this.autore = autore;
 	}
-
-
-	public Sala getSala() {
-		return sala;
-	}
-
-
-	public void setSala(Sala sala) {
-		this.sala = sala;
-	}	
-
 }

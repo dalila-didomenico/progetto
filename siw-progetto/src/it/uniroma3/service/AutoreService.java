@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import it.uniroma3.model.Autore;
+import it.uniroma3.model.Quadro;
 
 public class AutoreService {
 	
@@ -66,5 +67,10 @@ public class AutoreService {
 	et.commit();
 	em.close();
 	emf.close();
+	}
+
+	public void inserisciQuadro(Quadro quadro) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -8,6 +8,7 @@
      <h1>${autore.nome} ${autore.cognome}</h1>          
      <div>Nazionalità: ${autore.nazionalità}</div> 
      <div>Data nascita: ${autore.dataNascita}</div>       
-       <div>Data morte: ${autore.dataMorte}</div>                     
+       <div>Data morte: ${autore.dataMorte}</div>     
+       <div><a href="">Elenco opere dell'artista</a></div>                
 </body>
 </html>
