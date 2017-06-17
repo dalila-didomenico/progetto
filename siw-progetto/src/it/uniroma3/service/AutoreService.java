@@ -36,7 +36,7 @@ public class AutoreService {
 		this.em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		TypedQuery<Autore> query = em.createNamedQuery("findAll", Autore.class);
+		TypedQuery<Autore> query = em.createNamedQuery("findAllAutori", Autore.class);
 		List<Autore> autori = query.getResultList();
 		tx.commit();
 		em.close();

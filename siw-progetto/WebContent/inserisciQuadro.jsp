@@ -8,6 +8,7 @@
 <title>Inserimento nuovo quadro</title>
 </head>
 <body>
+<h2>Inserisci un nuovo quadro</h2>
 	<form action="quadro" method="post">
 		<div>
 			Titolo*: <input type="text" name="titolo" value='${quadro.titolo}' />
@@ -15,7 +16,7 @@
 		</div>
 		<div>
 			Tecnica*: <input type="text" name="tecnica" value='${quadro.tecnica}' />
-			${errDimensione}
+			${errTecnica}
 		</div>
 		<div>
 			Dimensioni*: <input type="text" name="dimensioni"
@@ -26,7 +27,7 @@
 				value='${quadro.anno}' /> ${errAnno}
 		</div>
 		<div>
-			Autore:<select>
+			Autore:  <select>
 				<c:forEach var="autore" items="autori">
 					<option>${autore.nome} ${autore.cognome}</option>
 				</c:forEach>
