@@ -9,10 +9,9 @@
 <body>
 	<h4>Inserisci i tuoi dati</h4>
 	<form action="login.do" method="POST">
-		Nome: <input type="text" name="username" /> 
-		Password: <input type="password" name="password" />
-		<input type="reset" value="Reimposta"/> 
-		<input type="submit" value="Entra" name="login">
+		Nome: <input type="text" name="username" /> Password: <input
+			type="password" name="password" /><input type="reset" value="Reimposta"/> <input type="submit"
+			value="Entra" name="login">
 	</form>
 
 

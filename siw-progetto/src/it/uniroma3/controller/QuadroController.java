@@ -17,6 +17,7 @@ import it.uniroma3.model.Quadro;
 import it.uniroma3.service.AutoreService;
 import it.uniroma3.service.QuadroService;
 import it.uniroma3.validator.AutoreValidator;
+import it.uniroma3.validator.QuadroValidator;
 
 @WebServlet("/quadro")
 public class QuadroController extends HttpServlet {
@@ -42,12 +43,12 @@ public class QuadroController extends HttpServlet {
 		
 		Quadro quadro = new Quadro();
 		request.setAttribute("quadro", quadro);
+		String autore = request.getParameter("autore");
+		request.setAttribute("autore", autore );
 		
-		AutoreValidator validator = new AutoreValidator();
+		QuadroValidator validator = new QuadroValidator();
 		
 		if(validator.validate(request)) {
-			AutoreService service = new AutoreService();
-			service.inserisciQuadro(quadro);
 			nextPage = "/quadro.jsp";
 		}
 		else

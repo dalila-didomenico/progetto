@@ -68,9 +68,17 @@ public class AutoreService {
 	em.close();
 	emf.close();
 	}
-
-	public void inserisciQuadro(Quadro quadro) {
-		// TODO Auto-generated method stub
-		
+	
+	public List<Quadro> getQuadriAutore(Long id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("esercitazione-unit");
+		this.em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Autore autore = em.find(Autore.class, id);
+		List<Quadro> quadri = autore.getQuadri();
+		tx.commit();
+		em.close();
+		emf.close();
+		return quadri;		
 	}
 }
