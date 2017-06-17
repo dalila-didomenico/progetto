@@ -16,5 +16,6 @@
 			</li>
 		</c:forEach>
 	</ul>
+	<a href="insAutore.jsp" >Inserisci un nuovo autore</a>
 </body>
 </html>

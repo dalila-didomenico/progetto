@@ -28,7 +28,7 @@
 		</div>
 		<div>
 			Autore:  <select>
-				<c:forEach var="autore" items="autori">
+				<c:forEach var="autore" items='${autori}'>
 					<option>${autore.nome} ${autore.cognome}</option>
 				</c:forEach>
 			</select>

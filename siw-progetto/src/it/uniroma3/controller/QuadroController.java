@@ -16,7 +16,6 @@ import it.uniroma3.model.Autore;
 import it.uniroma3.model.Quadro;
 import it.uniroma3.service.AutoreService;
 import it.uniroma3.service.QuadroService;
-import it.uniroma3.validator.AutoreValidator;
 import it.uniroma3.validator.QuadroValidator;
 
 @WebServlet("/quadro")
@@ -31,6 +30,9 @@ public class QuadroController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String nextPage;
+		AutoreService as = new AutoreService();
+		List<Autore> autori = as.getAutori();
+		request.setAttribute("autori", autori);
 		if(request.getParameter("commandC")!=null){
 		long id= Long.parseLong(request.getParameter("id"));
 		QuadroService pv = new QuadroService();
