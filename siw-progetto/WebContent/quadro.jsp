@@ -11,7 +11,7 @@
 <h2><p align="center">${quadro.titolo}</p></h2>
 <div>${quadro.autore}</div> <!-- si ricava così l'autore?? -->
 <div style="color: Purple; ">Tecnica: ${quadro.tecnica}</div>
-<div>Anno di realizzazione: ${quadro.anno}</div>
+<div>Anno di realizzazione: ${quadro.annoRealizzazione}</div>
 <div>Dimensioni: ${quadro.dimensioni}</div>
 <div>Si trova nella sala ${quadro.sala}</div> <!-- si ricava così la sala?? -->
 </body>

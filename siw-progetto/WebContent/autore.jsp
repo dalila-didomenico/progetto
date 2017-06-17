@@ -5,10 +5,12 @@
 <title>Autore</title>
 </head>
 <body>
-     <h1>${autore.nome} ${autore.cognome}</h1>          
-     <div>Nazionalit‡: ${autore.nazionalit‡}</div> 
+    <h2><p align="center">${autore.nome} ${autore.cognome}</p></h2>   
+     <div>Nazionalit√†: ${autore.nazionalit√†}</div> 
      <div>Data nascita: ${autore.dataNascita}</div>       
        <div>Data morte: ${autore.dataMorte}</div>     
-       <div><a href="listaQuadriAutore.jsp">Elenco opere dell'artista</a></div>                
+       <div><a href="listaQuadriAutore.jsp">Elenco opere dell'artista</a></div>                  
+       <div><a href="autori.jsp">Torna all'elenco autori</a></div>      
+       <div><a href="index.jsp">Torna alla home</a></div>             
 </body>
 </html>
