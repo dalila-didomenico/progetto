@@ -35,7 +35,7 @@ public class QuadroService {
 		this.em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		TypedQuery<Quadro> query = em.createNamedQuery("findAllQuadri", Quadro.class);
+		TypedQuery<Quadro> query = em.createNamedQuery("findAll", Quadro.class);
 		List<Quadro> quadri = query.getResultList();
 		tx.commit();
 		em.close();

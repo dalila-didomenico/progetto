@@ -8,7 +8,7 @@
 <body>
 	<ul>
 		<c:forEach var="autore" items="${autori}">
-			<li><a href="autore?id=${autore.id}"> ${autore.nome} </a>
+			<li><a href="autore?id=${autore.id}"> ${autore.nome} ${autore.cognome}</a>
 			<form action="autore" method="post">
 			 	<input type="hidden" value="${autore.id}" name="id"/>
 			    <input type="submit" value="cancella" name="commandC"/>
