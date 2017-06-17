@@ -8,7 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import it.uniroma3.model.Quadro;
+import it.uniroma3.model.*;
 
 public class QuadroService {
 

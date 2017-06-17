@@ -10,7 +10,7 @@
 	<p align="center"><h1>Benvenuto! Cosa desideri fare?</h1></p>
 	<ul>
 		<li><a href="login.jsp">Accedi come amministratore</a></li>
-		<li><a href="quadri.jsp">Sfoglia le opere della galleria</a></li>
+		<li><a href="">Sfoglia le opere della galleria</a></li>
 		<li><a href="gestioneAutori.jsp">Naviga tra gli artisti</a></li>
 	</ul>
 </body>

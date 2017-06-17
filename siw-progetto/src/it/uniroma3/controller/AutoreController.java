@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import it.uniroma3.model.Autore;
+import it.uniroma3.model.*;
 import it.uniroma3.service.AutoreService;
 import it.uniroma3.validator.AutoreValidator;
 
@@ -67,6 +67,8 @@ public class AutoreController extends HttpServlet {
 			Long id = Long.parseLong(request.getParameter("id"));
 			Autore autore = service.getOneAutore(id);
 			request.setAttribute("autore", autore);
+			List<Quadro> quadri = autore.getQuadri();
+			request.setAttribute("quadri", quadri);
 			nextPage = "/autore.jsp";
 		}
 		else {

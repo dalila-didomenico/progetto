@@ -13,7 +13,6 @@
 			 	<input type="hidden" value="${autore.id}" name="id"/>
 			    <input type="submit" value="cancella" name="commandC"/>
 			</form>
-			<div><a href="index.jsp">Torna alla home</a></div>     
 			</li>
 		</c:forEach>
 	</ul>

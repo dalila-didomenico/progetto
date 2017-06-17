@@ -73,4 +73,14 @@ public class Autore {
 	public Long getId() {
 		return id;
 	}
+
+	public List<Quadro> getQuadri() {
+		return quadri;
+	}
+
+	public void setQuadri(List<Quadro> quadri) {
+		this.quadri = quadri;
+	}
+	
+	
 }
