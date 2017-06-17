@@ -8,7 +8,7 @@
 <title>Inserimento nuovo quadro</title>
 </head>
 <body>
-<h2>Inserisci un nuovo quadro</h2>
+	<h2>Inserisci un nuovo quadro</h2>
 	<form action="quadro" method="post">
 		<div>
 			Titolo*: <input type="text" name="titolo" value='${quadro.titolo}' />
@@ -27,11 +27,10 @@
 				value='${quadro.anno}' /> ${errAnno}
 		</div>
 		<div>
-			Autore:  <select>
-				<c:forEach var="autore" items='${autori}'>
-					<option>${autore.nome} ${autore.cognome}</option>
-				</c:forEach>
-			</select>
+			Autore:
+			<c:forEach var="autore" items='${autori}'>
+				<input type="radio" name="nomeAutore" value="${autore.id}"> ${autore.nome} ${autore.cognome}
+					</c:forEach>
 		</div>
 		<div>*Campo obbligatorio</div>
 		<input type="submit" name="sumbit" value="invia" />

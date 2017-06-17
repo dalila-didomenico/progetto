@@ -49,7 +49,7 @@ public class AutoreController extends HttpServlet {
 			nextPage = "/autore.jsp";
 		}
 		else
-			nextPage = "/index.jsp";
+			nextPage = "/insAutore.jsp";
 
 		}
 		ServletContext application  = getServletContext();
