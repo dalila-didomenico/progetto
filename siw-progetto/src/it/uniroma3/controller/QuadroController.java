@@ -30,6 +30,9 @@ public class QuadroController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String nextPage;
+		AutoreService as = new AutoreService();
+		List<Autore> autori = as.getAutori();
+		request.setAttribute("autori", autori);
 		
 		if(request.getParameter("commandC")!=null){
 			long id= Long.parseLong(request.getParameter("id"));
@@ -40,9 +43,7 @@ public class QuadroController extends HttpServlet {
 			nextPage="/quadri.jsp";
 		}
 		else{
-			AutoreService as = new AutoreService();
-			List<Autore> autori = as.getAutori();
-			request.setAttribute("autori", autori);
+			
 			Quadro quadro = new Quadro();
 			request.setAttribute("quadro", quadro);
 			String autore = request.getParameter("autore");

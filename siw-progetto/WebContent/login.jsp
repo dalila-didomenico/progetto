@@ -1,19 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Autenticazione</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Login</title>
 </head>
 <body>
-	<h4>Inserisci i tuoi dati</h4>
-	<form action="login.do" method="POST">
-		Nome: <input type="text" name="username" /> Password: <input
-			type="password" name="password" /><input type="reset" value="Reimposta"/> <input type="submit"
-			value="Entra" name="login">
-	</form>
+	<h1>Effettua il login</h1>
 
+	<h2>Inserisci le tue credenziali</h2>
+	<form action="login" method="post">
+		<table> 
+		<tr>
+		<td>Email:</td>
+		<td><input type="text" name="email"></td>
+		<td>Password:</td>
+		<td><input type="password" name="password"></td>
+		<td> <input type="submit" value="login"></td>
+		</tr>
+		</table>
+	</form>
 
 </body>
 </html>
