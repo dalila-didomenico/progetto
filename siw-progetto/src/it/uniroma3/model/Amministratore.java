@@ -1,6 +1,6 @@
 package it.uniroma3.model;
 
-import javax.persistence.*;
+import javax.persistence.*; 
 
 @Entity
 @NamedQuery(name= "findAllAmministratori", query="SELECT amm FROM Amministratore amm")
