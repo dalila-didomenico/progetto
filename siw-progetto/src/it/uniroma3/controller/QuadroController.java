@@ -16,7 +16,6 @@ import it.uniroma3.model.Autore;
 import it.uniroma3.model.Quadro;
 import it.uniroma3.service.AutoreService;
 import it.uniroma3.service.QuadroService;
-import it.uniroma3.validator.AutoreValidator;
 import it.uniroma3.validator.QuadroValidator;
 
 @WebServlet("/quadro")
@@ -31,39 +30,42 @@ public class QuadroController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String nextPage;
+		
 		if(request.getParameter("commandC")!=null){
-		long id= Long.parseLong(request.getParameter("id"));
-		QuadroService pv = new QuadroService();
-		Quadro q = pv.getOne(id);//NO
-		pv.delete(q);						   // param id
-		request.setAttribute("quadri",pv.getQuadri());
-		nextPage="/quadri.jsp";
+			long id= Long.parseLong(request.getParameter("id"));
+			QuadroService pv = new QuadroService();
+			Quadro q = pv.getOne(id);//NO
+			pv.delete(q);						   // param id
+			request.setAttribute("quadri",pv.getQuadri());
+			nextPage="/quadri.jsp";
 		}
 		else{
-		
-		Quadro quadro = new Quadro();
-		request.setAttribute("quadro", quadro);
-		String autore = request.getParameter("autore");
-		request.setAttribute("autore", autore );
-		
-		QuadroValidator validator = new QuadroValidator();
-		
-		if(validator.validate(request)) {
-			nextPage = "/quadro.jsp";
-		}
-		else
-			nextPage = "/index.jsp";
+			AutoreService as = new AutoreService();
+			List<Autore> autori = as.getAutori();
+			request.setAttribute("autori", autori);
+			Quadro quadro = new Quadro();
+			request.setAttribute("quadro", quadro);
+			String autore = request.getParameter("autore");
+			request.setAttribute("autore", autore );
+			
+			QuadroValidator validator = new QuadroValidator();
+
+			if(validator.validate(request)) {
+				nextPage = "/quadro.jsp";
+			}
+			else
+				nextPage = "/index.jsp";
 
 		}
 		ServletContext application  = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
 		rd.forward(request, response);
 	}
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		String nextPage = "/quadri.jsp";
-		
+
 		QuadroService service = new QuadroService();
 		if(request.getParameter("id") != null) {
 			Long id = Long.parseLong(request.getParameter("id"));
@@ -75,7 +77,7 @@ public class QuadroController extends HttpServlet {
 			List<Quadro> quadri = service.getQuadri();
 			request.setAttribute("quadri", quadri);
 		}
-		
+
 		ServletContext application = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
 		rd.forward(request, response);	

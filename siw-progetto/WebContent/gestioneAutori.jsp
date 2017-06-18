@@ -8,7 +8,7 @@
 	<form action="autore" method="post">
 		<h2>Benvenuto! Cosa vuoi fare?</h2>
 		<ul>
-		<li>Consulta la <a href="autore">lista degli autori</a></li>
+		<li>Consulta la <a href="autori">lista degli autori</a></li>
 		<li>Inserisci un <a href="insAutore.jsp">nuovo autore</a></li>
 		</ul>
 	</form>
